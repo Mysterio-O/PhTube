@@ -5,10 +5,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PhTube</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        .sort-btn {
+            background-color: rgba(37, 37, 37, 0.2);
+        }
+    </style>
 </head>
 
 <body>
+    <nav class="w-11/12 mx-auto flex justify-between items-center border-b-2 py-6">
 
+        <div>
+            <img src="./assets/Logo.png" alt="">
+        </div>
+        <div>
+            <button class="btn sort-btn">Sort by View</button>
+        </div>
+        <div>
+            <button class="btn bg-[#FF1F3D] text-white">Blog</button>
+        </div>
+    </nav>
 </body>
 
 </html>
