@@ -167,3 +167,8 @@ document.getElementById('search-box').addEventListener('keyup', (e)=> {
     const input = e.target.value;
     videoLoader(input);
 })
+
+document.addEventListener("DOMContentLoaded", () => {
+    videoLoader(); // Load all videos when the page first loads
+});
+
