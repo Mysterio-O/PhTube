@@ -15,18 +15,50 @@
 </head>
 
 <body>
-    <nav class="w-11/12 mx-auto flex justify-between items-center border-b-2 py-6">
+    <nav class="w-11/12 mx-auto flex flex-col gap-3 lg:flex-row lg:justify-between items-center border-b-2 py-6 border-[#17171720]  ">
 
         <div>
             <img src="./assets/Logo.png" alt="">
         </div>
         <div>
-            <button class="btn sort-btn">Sort by View</button>
+            <label class="input">
+                <svg class="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g stroke-linejoin="round" stroke-linecap="round" stroke-width="2.5" fill="none" stroke="currentColor"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></g></svg>
+                <input id="search-box" type="search" required placeholder="Search"/>
+              </label>
         </div>
         <div>
-            <button class="btn bg-[#FF1F3D] text-white">Blog</button>
+            <button class="btn bg-[#FF1F3D] text-white hover:text-[#FF1F3D] hover:bg-white">Sort By View</button>
         </div>
     </nav>
+    <nav class="w-11/12 mx-auto flex justify-center mt-8">
+        <div id="category-container" class="flex gap-5">
+            <button onclick="videoLoader()" class="btn btn-sm bg-[#FF1F3D] text-white" id="All-btn">All</button>
+        </div>
+    </nav>
+
+    
+
+    <section class="grid grid-cols-1 lg:grid-cols-4 gap-5 mt-5 w-11/12 mx-auto" id="video-container">
+        
+    </section>
+
+    <!-- Open the modal using ID.showModal() method -->
+<!-- <button class="btn" onclick="my_modal_1.showModal()">open modal</button> -->
+<dialog id="videoDetails" class="modal">
+  <div class="modal-box">
+    <div id="video-details">
+        <!-- Video details will be inserted here -->
+    </div>
+    <div class="modal-action">
+      <form method="dialog">
+        <!-- if there is a button in form, it will close the modal -->
+        <button class="btn">Close</button>
+      </form>
+    </div>
+  </div>
+</dialog>
+    <script src="./script/index.js"></script>
 </body>
 
 </html>
+
